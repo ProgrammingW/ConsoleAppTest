@@ -10,7 +10,7 @@ public class Program
     {
 
         Weapon katana = new Weapon("Katana", "Sword", 50, 2.5f,50);
-        Player deadly = new Player("Deadly", 100, 20,100);
+        Player deadly = new Player("Deadly", 100, 20,200);
         Enemy goblin = new Enemy("Goblin", 200, 5, 50);
 
         Console.WriteLine("Initial weapon and enemy status:");

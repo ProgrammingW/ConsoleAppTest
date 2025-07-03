@@ -13,39 +13,31 @@ namespace ConsoleAppTest
         {
 
             int totalDamage = 0;
-            if (specialDamage > 0)
-            {
-                Console.WriteLine($"{Name} uses a special attack with {weapon.Name} for {specialDamage} extra damage!");
-                totalDamage = specialDamage + weapon.Damage;
-            }
-            else
-            {
-                totalDamage = AttackPower + weapon.Damage;
-            }
+            
 
             if (!IsAlive)
             {
                 Console.WriteLine($"{Name} is defeated and cannot attack.");
                 return;
             }
-            else
-            {
-                if (hasStamina(weapon.StaminaToAttack))
-                {
+            if (!enemy.IsAlive) {
+                Console.WriteLine($"{enemy.Name} is defeated. Are you going to kill him again {Name}?");
+                return;
+            }
 
-                    Console.WriteLine($"{Name}  attacks {enemy.Name} with {weapon.Name} using {Stamina} Stamina");
-                    if (!specialAttack) {
-                        Stamina -= weapon.StaminaToAttack;
-                    }
-                    
-                    enemy.TakeDamage(totalDamage);
-                }
-                else
-                {
+            totalDamage = (specialDamage>0) ? specialDamage + weapon.Damage : AttackPower + weapon.Damage;
+
+            if (!specialAttack) {
+                if (!hasStamina(weapon.StaminaToAttack)) {
                     Console.WriteLine($"{Name} needs {weapon.StaminaToAttack} stamina to attack with {weapon.Name}. Current stamina: {Stamina}");
                     return;
                 }
+                Stamina -= weapon.StaminaToAttack;
             }
+
+            Console.WriteLine($"{Name}  attacks {enemy.Name} with {weapon.Name} using {Stamina} Stamina");
+            enemy.TakeDamage(totalDamage);
+           
         }
         public void SpecialAttack(Enemy enemy,Weapon weapon, int StaminaSpecialAttack)
         {
@@ -57,8 +49,11 @@ namespace ConsoleAppTest
             else{
                 int specialDamage = AttackPower * 2; // Example special attack damage calculation
                 Stamina -= StaminaSpecialAttack; // Deduct stamina for special attack
+
+                Console.WriteLine($"{Name} uses a special attack with {weapon.Name} for {specialDamage} extra damage!");
                 AttackEnemy(enemy, weapon,specialDamage,true);
                 
+
             }
                 
         }
