@@ -13,7 +13,7 @@ public class Program
         Player deadly = new Player("Deadly", 100, 20);
         Enemy goblin = new Enemy("Goblin", 200, 5);
 
-        Console.WriteLine("Initial weapong and enemy status:");
+        Console.WriteLine("Initial weapon and enemy status:");
 
         katana.Inspect();
         goblin.Inspect();

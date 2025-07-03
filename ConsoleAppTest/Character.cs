@@ -30,14 +30,15 @@ namespace ConsoleAppTest
             }
 
             Health -= amount;
-            Console.WriteLine($"{Name} takes {amount} damage! Remaining health: {Health}");
-
             if (Health <= 0)
             {
                 Console.WriteLine($"{Name} has been defeated!");
                 Health = 0; // Ensure health does not go below zero
 
             }
+            Console.WriteLine($"{Name} takes {amount} damage! Remaining health: {Health}");
+
+            
 
         }
 
