@@ -13,6 +13,7 @@ namespace ConsoleAppTest
         public int Damage { get; set; }
 
         public float Weight { get; set; }
+        public int StaminaToAttack { get; set; }
 
         public bool isHeavy
         {
@@ -22,12 +23,13 @@ namespace ConsoleAppTest
             }
         }
 
-        public Weapon(string name, string type, int damage, float weight)
+        public Weapon(string name, string type, int damage, float weight, int staminatoattack)
         {
             Name = name;
             Type = type;
             Damage = damage;
             Weight = weight;
+            StaminaToAttack = staminatoattack;
         }
         public void Attack()
         {

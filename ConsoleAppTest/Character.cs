@@ -14,11 +14,14 @@ namespace ConsoleAppTest
 
         public bool IsAlive => Health > 0;
 
-        public Character(string name, int health, int attackPower)
+        public int Stamina { get; set; } = 100; // Default stamina value
+
+        public Character(string name, int health, int attackPower, int stamina)
         {
             Name = name;
             Health = health;
             AttackPower = attackPower;
+            Stamina = stamina;
         }
 
         public virtual void TakeDamage(int amount)
@@ -30,7 +33,7 @@ namespace ConsoleAppTest
             }
 
             Health -= amount;
-            if (Health <= 0)
+            if (Health <= 0) 
             {
                 Console.WriteLine($"{Name} has been defeated!");
                 Health = 0; // Ensure health does not go below zero
@@ -40,6 +43,18 @@ namespace ConsoleAppTest
 
             
 
+        }
+        public virtual bool hasStamina(int StaminaAttackCost)
+        {
+            if (Stamina >= StaminaAttackCost)
+            {
+                Console.WriteLine($"{Name} has enough stamina. Remaining stamina: {Stamina}");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public virtual void Inspect()

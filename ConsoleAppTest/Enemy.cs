@@ -9,7 +9,7 @@ namespace ConsoleAppTest
     internal class Enemy : Character
     {
        
-        public Enemy(string name, int health, int attackPower):base(name,health,attackPower){}
+        public Enemy(string name, int health, int attackPower, int stamina):base(name,health,attackPower, stamina){}
         
         
         public void AttackPlayer(Player player)

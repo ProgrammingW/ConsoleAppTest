@@ -9,9 +9,9 @@ public class Program
     public static void Main()
     {
 
-        Weapon katana = new Weapon("Katana", "Sword", 50, 2.5f);
-        Player deadly = new Player("Deadly", 100, 20);
-        Enemy goblin = new Enemy("Goblin", 200, 5);
+        Weapon katana = new Weapon("Katana", "Sword", 50, 2.5f,50);
+        Player deadly = new Player("Deadly", 100, 20,100);
+        Enemy goblin = new Enemy("Goblin", 200, 5, 50);
 
         Console.WriteLine("Initial weapon and enemy status:");
 
@@ -19,7 +19,7 @@ public class Program
         goblin.Inspect();
 
         Console.WriteLine("Battle begins:");
-
+        deadly.SpecialAttack(goblin, katana, 80);
         deadly.AttackEnemy(goblin, katana);
         katana.Upgrade(10);
         deadly.AttackEnemy(goblin, katana);

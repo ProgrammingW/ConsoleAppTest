@@ -8,25 +8,32 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/deadlymsz/.nuget/packages/": {}
+    "C:\\Users\\deadly\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/deadlymsz/Documents/projects/ConsoleAppTest/ConsoleAppTest/ConsoleAppTest.csproj",
+      "projectUniqueName": "C:\\Users\\deadly\\source\\repos\\ConsoleAppTest\\ConsoleAppTest\\ConsoleAppTest.csproj",
       "projectName": "ConsoleAppTest",
-      "projectPath": "/Users/deadlymsz/Documents/projects/ConsoleAppTest/ConsoleAppTest/ConsoleAppTest.csproj",
-      "packagesPath": "/Users/deadlymsz/.nuget/packages/",
-      "outputPath": "/Users/deadlymsz/Documents/projects/ConsoleAppTest/ConsoleAppTest/obj/",
+      "projectPath": "C:\\Users\\deadly\\source\\repos\\ConsoleAppTest\\ConsoleAppTest\\ConsoleAppTest.csproj",
+      "packagesPath": "C:\\Users\\deadly\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\deadly\\source\\repos\\ConsoleAppTest\\ConsoleAppTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/deadlymsz/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\deadly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -66,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
