@@ -16,7 +16,7 @@ namespace ConsoleAppTest
         }
         public override void Attack()
         {
-            
+            Console.WriteLine($"{Name} attacks with {Damage} damage!");
         }
     }
 }
