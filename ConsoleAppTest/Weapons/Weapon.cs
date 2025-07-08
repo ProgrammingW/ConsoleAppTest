@@ -31,7 +31,7 @@ namespace ConsoleAppTest
             Weight = weight;
             StaminaToAttack = staminatoattack;
         }
-        public void Attack()
+        public virtual void Attack()
         {
             Console.WriteLine($"{Name} attacks with {Damage} damage!");
         }
